@@ -1,40 +1,52 @@
-//
-//  DetailViewController.swift
-//  UiTableViewController Test 02
-//
-//  Created by D7702_09 on 2018. 5. 28..
-//  Copyright © 2018년 lse. All rights reserved.
-//
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     @IBOutlet weak var cellImageView: UIImageView!
-    @IBOutlet weak var location: UILabel!
-    @IBOutlet weak var tel: UILabel!
+    @IBOutlet weak var detailTableView: UITableView!
     
     var cellImage = ""
     var telNum: String = ""
     var locationName: String = ""
+    var menu: String = ""
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        //delegate connection
+        detailTableView.delegate = self
+        detailTableView.dataSource = self
 
         cellImageView.image = UIImage(named: cellImage)
         
-        location.text = locationName
-        tel.text = telNum
-        
-        
-        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
     }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "detailCell", for: indexPath)
+        
+        if indexPath.row == 0 {
+            cell.textLabel?.text = " 주소 : " + locationName
+            return cell
+        } else if indexPath.row == 1 {
+            cell.textLabel?.text = " 전화번호 : " + telNum
+            return cell
+        } else {
+            cell.textLabel?.text = " 메뉴 : " + menu
+            return cell
+        }
+    }
+   
     
 
     /*

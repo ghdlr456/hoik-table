@@ -7,6 +7,14 @@ class MyTableViewController: UITableViewController {
     var foodStoreThumbnail = ["01", "02", "03", "04", "05", "06"]
     var foodStoreAddress = ["부산광역시 부산진구 양정동 418-282","부산광역시 부산진구 양정동 418-282","부산광역시 부산진구 양정동 418-282","부산광역시 부산진구 양정동 418-282","부산광역시 부산진구 양정동 418-282","부산광역시 부산진구 양정동 418-282" ]
     var foodStoreTel = ["051-852-9969","051-852-9969","051-852-9969","051-852-9969","051-852-9969","051-852-9969"]
+    var foodMenus = ["수육백반, 돼지국밥, 순대국밥, 내장국밥",
+                     "짜장면, 짬짜면, 탕수육, 탕짜면,군만두, 양장피",
+                     "떡볶이, 오뎅, 떡강정,볶짜면,핫도그, 튀김",
+                     "치킨마요, 참치마요, 돈불와퍼, 돈치와퍼, 돈까스카레",
+                     "짜장면, 짬짜면, 탕수육, 탕짜면,군만두, 양장피",
+                     "짬뽕, 짜장면, 짬뽕밥, 탕수육, 볶음밥"
+                     ]
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -139,6 +147,7 @@ class MyTableViewController: UITableViewController {
                 
                 //주소 넘기기
                 destinationController.telNum = foodStoreTel[indexPath.row]
+                destinationController.menu = foodMenus[indexPath.row]
                 
             }
         }
