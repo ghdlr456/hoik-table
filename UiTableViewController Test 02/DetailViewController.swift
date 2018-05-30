@@ -35,13 +35,14 @@ class DetailViewController: UIViewController,UITableViewDelegate,UITableViewData
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "detailCell", for: indexPath)
         
-        if indexPath.row == 0 {
+        switch indexPath.row  {
+        case 0:
             cell.textLabel?.text = " 주소 : " + locationName
             return cell
-        } else if indexPath.row == 1 {
+         case 1:
             cell.textLabel?.text = " 전화번호 : " + telNum
             return cell
-        } else {
+         default:
             cell.textLabel?.text = " 메뉴 : " + menu
             return cell
         }

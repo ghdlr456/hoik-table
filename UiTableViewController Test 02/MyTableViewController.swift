@@ -10,8 +10,8 @@ class MyTableViewController: UITableViewController {
     var foodMenus = ["수육백반, 돼지국밥, 순대국밥, 내장국밥",
                      "짜장면, 짬짜면, 탕수육, 탕짜면,군만두, 양장피",
                      "떡볶이, 오뎅, 떡강정,볶짜면,핫도그, 튀김",
-                     "치킨마요, 참치마요, 돈불와퍼, 돈치와퍼, 돈까스카레",
                      "짜장면, 짬짜면, 탕수육, 탕짜면,군만두, 양장피",
+                     "치킨마요, 참치마요, 돈불와퍼, 돈치와퍼, 돈까스카레",
                      "짬뽕, 짜장면, 짬뽕밥, 탕수육, 볶음밥"
                      ]
     
@@ -147,6 +147,8 @@ class MyTableViewController: UITableViewController {
                 
                 //주소 넘기기
                 destinationController.telNum = foodStoreTel[indexPath.row]
+                
+                //메뉴 넘기기
                 destinationController.menu = foodMenus[indexPath.row]
                 
             }
