@@ -24,7 +24,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fwc-xZ-cR3" id="zv7-Jj-cQO">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="c0y-VT-GiQ">
@@ -84,7 +84,13 @@
                             <outlet property="delegate" destination="cFp-Sf-CKj" id="JhQ-2C-NdH"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="fHx-4e-WvK"/>
+                    <navigationItem key="navigationItem" id="fHx-4e-WvK">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="map" id="IcC-6g-fLO">
+                            <connections>
+                                <segue destination="RrU-vt-zoB" kind="show" identifier="totalMap" id="1y6-0y-iel"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ppm-sE-6qu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -109,11 +115,11 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ATF-iQ-sdu" id="xh3-E5-fpW">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" id="smf-Q3-PzP">
-                                                    <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -145,7 +151,38 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8eg-xy-wgY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1746.4000000000001" y="64.31784107946028"/>
+            <point key="canvasLocation" x="1734" y="-393"/>
+        </scene>
+        <!--Total Map View Controller-->
+        <scene sceneID="IcD-eh-KOJ">
+            <objects>
+                <viewController id="RrU-vt-zoB" customClass="TotalMapViewController" customModule="UiTableViewController_Test_02" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hd1-4K-dsJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Dgu-sh-YBb">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Dgu-sh-YBb" firstAttribute="leading" secondItem="3nX-oF-8Qd" secondAttribute="leading" id="7kI-hr-Msu"/>
+                            <constraint firstItem="Dgu-sh-YBb" firstAttribute="top" secondItem="3nX-oF-8Qd" secondAttribute="top" id="Gdh-dx-PgD"/>
+                            <constraint firstItem="Dgu-sh-YBb" firstAttribute="top" secondItem="3nX-oF-8Qd" secondAttribute="top" id="NzD-JO-GBn"/>
+                            <constraint firstItem="3nX-oF-8Qd" firstAttribute="trailing" secondItem="Dgu-sh-YBb" secondAttribute="trailing" id="V5y-JH-usM"/>
+                            <constraint firstItem="3nX-oF-8Qd" firstAttribute="bottom" secondItem="Dgu-sh-YBb" secondAttribute="bottom" id="WVV-ts-Ah0"/>
+                            <constraint firstItem="3nX-oF-8Qd" firstAttribute="bottom" secondItem="Dgu-sh-YBb" secondAttribute="bottom" id="sP0-O8-PTu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3nX-oF-8Qd"/>
+                    </view>
+                    <connections>
+                        <outlet property="totalMapView" destination="Dgu-sh-YBb" id="jHs-vs-9Hz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LCD-DU-nv7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1734" y="318"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="STE-sq-WCd">
@@ -168,5 +205,6 @@
     </scenes>
     <resources>
         <image name="01" width="800" height="800"/>
+        <image name="map" width="64" height="64"/>
     </resources>
 </document>

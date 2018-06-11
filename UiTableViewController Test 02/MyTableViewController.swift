@@ -125,17 +125,12 @@ class MyTableViewController: UITableViewController {
     }
     */
 
-    
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
         
         if segue.identifier == "showDetail" {
             if let indexPath = tableView.indexPathForSelectedRow   {
                let destinationController = segue.destination as! DetailViewController
+                
                 //이름 넘기기
                 destinationController.title = foodStoreNames[indexPath.row]
                 
@@ -152,6 +147,14 @@ class MyTableViewController: UITableViewController {
                 destinationController.menu = foodMenus[indexPath.row]
                 
             }
+        } else if segue.identifier == "totalMap" {
+            let destinationController = segue.destination as! TotalMapViewController
+            destinationController.loctions = foodStoreAddress
+            destinationController.names = foodStoreNames
+            
+            
+            
+            
         }
         
         
