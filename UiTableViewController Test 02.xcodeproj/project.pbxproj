@@ -15,6 +15,7 @@
 		7429401420B29D5C0047FB95 /* FoodStoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7429401320B29D5C0047FB95 /* FoodStoreTableViewCell.swift */; };
 		743C83F120CE513600DCD70A /* TotalMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743C83F020CE513600DCD70A /* TotalMapViewController.swift */; };
 		748299E920BBDA1D00490ECD /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748299E820BBDA1D00490ECD /* DetailViewController.swift */; };
+		748AC48A20D77EF600BD5C94 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748AC48920D77EF600BD5C94 /* DataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		7429401320B29D5C0047FB95 /* FoodStoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodStoreTableViewCell.swift; sourceTree = "<group>"; };
 		743C83F020CE513600DCD70A /* TotalMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalMapViewController.swift; sourceTree = "<group>"; };
 		748299E820BBDA1D00490ECD /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		748AC48920D77EF600BD5C94 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +46,7 @@
 		741C17D820AC061400FE6E1E = {
 			isa = PBXGroup;
 			children = (
+				748AC48920D77EF600BD5C94 /* DataModel.swift */,
 				741C17E320AC061400FE6E1E /* UiTableViewController Test 02 */,
 				741C17E220AC061400FE6E1E /* Products */,
 			);
@@ -60,17 +63,25 @@
 		741C17E320AC061400FE6E1E /* UiTableViewController Test 02 */ = {
 			isa = PBXGroup;
 			children = (
+				748AC48820D77EB700BD5C94 /* Storyboard */,
 				7429401320B29D5C0047FB95 /* FoodStoreTableViewCell.swift */,
 				741C17E420AC061400FE6E1E /* AppDelegate.swift */,
-				741C17E820AC061400FE6E1E /* Main.storyboard */,
 				748299E820BBDA1D00490ECD /* DetailViewController.swift */,
 				741C17F620AC06C400FE6E1E /* MyTableViewController.swift */,
 				741C17EB20AC061400FE6E1E /* Assets.xcassets */,
-				741C17ED20AC061400FE6E1E /* LaunchScreen.storyboard */,
 				741C17F020AC061400FE6E1E /* Info.plist */,
 				743C83F020CE513600DCD70A /* TotalMapViewController.swift */,
 			);
 			path = "UiTableViewController Test 02";
+			sourceTree = "<group>";
+		};
+		748AC48820D77EB700BD5C94 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				741C17E820AC061400FE6E1E /* Main.storyboard */,
+				741C17ED20AC061400FE6E1E /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +161,7 @@
 				741C17F720AC06C400FE6E1E /* MyTableViewController.swift in Sources */,
 				748299E920BBDA1D00490ECD /* DetailViewController.swift in Sources */,
 				743C83F120CE513600DCD70A /* TotalMapViewController.swift in Sources */,
+				748AC48A20D77EF600BD5C94 /* DataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
